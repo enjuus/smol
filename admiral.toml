@@ -1,0 +1,45 @@
+[admiral]
+items = ["left", "clock", "battery", "volume"]
+
+[notify]
+path = "./notify.py"
+
+[title]
+path = "./title.sh"
+
+[space_small]
+path = "echo '   '"
+
+[spaces]
+path = "echo '                                                                                                      '"
+static = true
+
+[clock]
+path = "./clock.sh"
+reload = 60
+
+[volume]
+path = "./volume.sh"
+reload = 1
+
+[battery]
+path = "./battery.sh"
+reload = 10
+
+[work]
+path = "./workspace.sh"
+
+[modes]
+path = "./modes.py"
+
+[left]
+path = "echo '%{l}'"
+static = true
+
+[center]
+path = "echo '%{c}'"
+static = true
+
+[right]
+path = "echo '%{r}'"
+static = true

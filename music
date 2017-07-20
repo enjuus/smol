@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+set font '-*-lemon-medium-r-*-*-*-*-*-*-m-*-iso10646-1'
+set px 25
+set ph 25
+set pw 25
+set py 50
+
+set icon ⮭
+set icon2 ⮕
+
+feh --bg-fill '/home/fullsalvo/Pictures/Walls/WindowRain.jpg'
+
+echo "%{A:$HOME/.smol/popups/msc/launcher &:}  $icon2  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#DFDBCA' -F '#C3665A' | sh

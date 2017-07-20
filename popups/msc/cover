@@ -1,0 +1,46 @@
+#!/bin/env fish
+
+## CONFIGURATION
+#  use arrays isntead of individual variables
+
+# Set music dir location
+## FUCNTIONS
+
+# This function extracts the current playing album location
+# This function displays the cover
+function spawncover
+  set musicdir ~/pic/album_art
+  set -g artist (sp current | grep Artist | string sub -s 9)
+  set -g album (sp current | grep Album | string sub -s 9)
+  # Display mpc current in lemonbar
+	pkill -f 'n30f -d -x 2'
+  # setting new artist & album
+  # If albumcover already exists in $musicdir display it
+  # otherwise grab it from the interwebs 
+  if test -f $musicdir/$artist\_$album.png
+    echo "exists already?"
+	  n30f -d -x 25 -y 533 $musicdir/$artist\_$album.png &
+  else
+    # grabbing image and muting output
+    glyrc cover --artist $artist --album $album --write $musicdir/$artist\_$album.png > /dev/null 2>&1
+    # just to make sure it found it
+    if test -f $musicdir/$artist\_$album.png
+      # resizing it
+      convert $musicdir/$artist\_$album.png -resize 160x170 $musicdir/$artist\_$album.png
+      n30f -d -x 25 -y 533 $musicdir/$artist\_$album.png &
+    else
+      echo "NO"
+    end
+  end
+end
+
+# This function displays the current info in 2 lemonbars. Otherwise it displays a message
+if test (pgrep -f 'n30f -d -x 2' | head -n 1)
+	pkill -f 'n30f -d -x 2'
+	exit
+end
+
+#initial launch
+sp listen | while read
+  spawncover
+end

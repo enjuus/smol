@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+
+set font '-*-lemon-medium-r-*-*-*-*-*-*-m-*-iso10646-1'
+set px 25
+set ph 25
+set pw 25
+set py 25
+
+set icon ⮭
+
+killall lemonbar
+
+feh --bg-fill '/home/skr0tm/pic/wallpaper/legs.jpg'
+
+~/.smol/music &
+
+echo "%{A:$HOME/.smol/admiral.sh &:}  $icon  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#DFDBCA' -F '#C3665A' | sh
