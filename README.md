@@ -1,0 +1,2 @@
+# smol
+my lemonbar scripts
