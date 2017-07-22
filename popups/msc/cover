@@ -10,8 +10,8 @@
 # This function displays the cover
 function spawncover
   set musicdir ~/pic/album_art
-  set -g artist (sp current | grep Artist | string sub -s 9)
-  set -g album (sp current | grep Album | string sub -s 9)
+  set -g artist (sp current | grep AlbumArtist | string sub -s 14)
+  set -g album (sp current | grep -w Album | string sub -s 14)
   # Display mpc current in lemonbar
 	pkill -f 'n30f -d -x 2'
   # setting new artist & album

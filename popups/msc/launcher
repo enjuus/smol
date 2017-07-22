@@ -3,8 +3,8 @@
 set -g res (xrandr | grep '*' | cut -dx -f1)
 
 set font '-*-lemon-medium-r-*-*-*-*-*-*-m-*-iso10646-1'
-set bg "#DFDBCA"
-set fg "#313131"
+set bg "#eeeeee"
+set fg "#2e2e2e"
 
 set py 50
 set pw 200
@@ -15,4 +15,5 @@ if test -z (pgrep -f 'lemonbar -g 300x25')
 else
     pkill -f 'lemonbar -g 300x25'
     pkill -f 'n30f'
+    pkill -f 'msc/cover'
 end

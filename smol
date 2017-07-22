@@ -9,9 +9,9 @@ set py 25
 set icon ⮭
 
 killall lemonbar
+pkill -f 'msc/cover'
 
-feh --bg-fill '/home/skr0tm/pic/wallpaper/legs.jpg'
 
 ~/.smol/music &
 
-echo "%{A:$HOME/.smol/admiral.sh &:}  $icon  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#DFDBCA' -F '#C3665A' | sh
+echo "%{A:$HOME/.smol/admiral.sh &:}  $icon  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#eeeeee' -F '#aa8574' | sh
