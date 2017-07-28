@@ -3,15 +3,15 @@
 set -g res (xrandr | grep '*' | cut -dx -f1)
 
 set font '-*-lemon-medium-r-*-*-*-*-*-*-m-*-iso10646-1'
-set bg "#eeeeee"
-set fg "#2e2e2e"
+set bg "#E8DFD6"
+set fg "#021B21"
 
 set py 50
 set pw 200
 set px 50
 
 if test -z (pgrep -f 'lemonbar -g 300x25')
-    sp listen | lemonbar -g 300x25+$px+$py -p -b -f $font -B '#00ffffff' -F $fg | sh
+    mpcc | lemonbar -g 300x25+$px+$py -p -b -f $font -B '#00ffffff' -F $fg | sh
 else
     pkill -f 'lemonbar -g 300x25'
     pkill -f 'n30f'

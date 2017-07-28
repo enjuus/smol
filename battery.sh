@@ -13,6 +13,6 @@ else if test $checkbat -le 60
 else if test $checkbat -le 100
   set icon ⮒
 end
-echo "  %{F#aa8574 }$icon%{F#2e2e2e }$battery  "
+echo "  %{F#C2454E }$icon%{F#021B21 }$battery  "
 
 

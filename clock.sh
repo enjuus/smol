@@ -5,5 +5,5 @@
 # set text color
 # set current date
 set dat (date "+%d %b %Y  %H:%M")
-echo "%{F#2e2e2e } $icon $dat  "
+echo "%{F#021B21 } $icon $dat  "
 

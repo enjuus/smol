@@ -13,5 +13,6 @@ pkill -f 'msc/cover'
 
 
 ~/.smol/music &
+~/.smol/wrk.sh &
 
-echo "%{A:$HOME/.smol/admiral.sh &:}  $icon  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#eeeeee' -F '#aa8574' | sh
+echo "%{A:$HOME/.smol/admiral.sh &:}  $icon  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#E8DFD6' -F '#C2454E' | sh

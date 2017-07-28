@@ -10,7 +10,7 @@ else
   volout="mute"
 fi
 
-outstr="%{F#aa8574 }"${outstr}"%{F#2e2e2e }"${volout}
+outstr="%{F#C2454E }"${outstr}"%{F#021B21 }"${volout}
 
 
 echo ${outstr}"  "

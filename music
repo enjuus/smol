@@ -11,4 +11,4 @@ set icon2 ⮕
 
 feh --bg-fill '/home/fullsalvo/Pictures/Walls/WindowRain.jpg'
 
-echo "%{A:$HOME/.smol/popups/msc/launcher &:}  $icon2  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#eeeeee' -F '#aa8574' | sh
+echo "%{A:$HOME/.smol/popups/msc/launcher &:}  $icon2  %{A}" | lemonbar -b -p -f "$font" -g $pw"x$ph+$px+$py" -B '#E8DFD6' -F '#C2454E' | sh
